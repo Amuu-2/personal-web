@@ -1,0 +1,75 @@
+.about {
+  padding: 24px 0 0;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  margin: 0 0 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 20px;
+  height: 2px;
+  background: #c0392b;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 18px;
+  border: 1px solid #e8e8e8;
+  transition: box-shadow 0.2s;
+}
+
+.about-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.about-label {
+  display: block;
+  font-size: 0.7rem;
+  color: #c0392b;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-value {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0 16px 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
