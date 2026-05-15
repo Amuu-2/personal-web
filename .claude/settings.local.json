@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(curl -s --proxy http://127.0.0.1:7897 https://api.github.com/repos/Amuu-2/personal-web/actions/runs?per_page=3)",
+      "WebFetch(domain:github.com)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
