@@ -54,6 +54,15 @@
   color: #444;
 }
 
+.chat-bubble.loading {
+  color: #bbb;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 .chat-bubble.user {
   align-self: flex-end;
   background: #c0392b;

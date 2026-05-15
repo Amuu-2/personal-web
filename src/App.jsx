@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import Header from './components/Header'
 import About from './components/About'
 import ChatBot from './components/ChatBot'
+import Portfolio from './components/Portfolio'
 import './App.css'
 
 export default function App() {
@@ -43,6 +44,7 @@ export default function App() {
             <ChatBot height={botHeight} />
           </aside>
         </div>
+        <Portfolio />
         <footer className="footer">
           <p>{'© 2026 张理牧'}</p>
         </footer>

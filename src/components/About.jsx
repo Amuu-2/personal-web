@@ -6,7 +6,6 @@ const cards = [
   { label: '近期在做', value: profile.recent },
   { label: '擅长方向', value: profile.skills.join(' · ') },
   { label: '兴趣爱好', value: profile.interests.join(' · ') },
-  { label: '个人特点', value: profile.trait },
   { label: '联系方式', value: null, extra: true },
 ]
 

@@ -1,14 +1,13 @@
 export const profile = {
   name: '张理牧',
   title: '一个正在学习使用AI完成不同需求的数字经济专业硕士',
-  identity: '上海外国语大学数字经济专硕 27届毕业生',
-  recent: '搭建个人主页，制作、整理作品集',
-  skills: ['内容表达', 'AI 产品', '知识整理'],
+  identity: '上海外国语大学数字经济专硕 研一学生',
+  recent: '使用AI做产品，满足自己的需求后再进一步去满足他人的需求',
+  skills: ['把复杂问题讲清楚', 'AI 产品', '内容表达', '知识整理'],
   interests: ['健身', '篮球', '阅读', '听音乐'],
-  trait: '外向善于交际',
   contact: {
-    email: 'example@email.com',
-    wechat: 'wx_example',
+    email: '0253700878@shisu.edu.cn',
+    wechat: '2322302956',
   },
 }
 
@@ -34,11 +33,56 @@ export const qaPairs = [
   },
   {
     keywords: ['擅长', '能力', '技能', '会什么', '方向'],
-    answer: `我主要关注和擅长的方向包括：${profile.skills.join('、')}。\n另外，我的特点是${profile.trait}，喜欢与人交流合作。`,
+    answer: `我主要关注和擅长的方向包括：${profile.skills.join('、')}。`,
   },
   {
     keywords: ['兴趣', '爱好', '喜欢', '平时'],
     answer: `我的兴趣爱好包括：${profile.interests.join('、')}。\n其中健身和篮球是我的日常坚持。`,
+  },
+]
+
+export const systemPrompt = `你是${profile.name}的数字分身，在个人主页里回答访客关于他的问题。
+
+关于${profile.name}：
+- 名字：${profile.name}
+- 身份：${profile.identity}
+- 简介：${profile.title}
+- 最近在做：${profile.recent}
+- 擅长和关注：${profile.skills.join('、')}
+- 兴趣爱好：${profile.interests.join('、')}
+- 邮箱：${profile.contact.email}
+- 微信：${profile.contact.wechat}
+- 作品：减脂预测记录页面、历史粘贴板、AI智能会议纪要助手。如果访客问作品，直接说"下面作品栏有详细介绍，往下翻就能看到"，不要展开介绍作品细节
+
+说话方式：
+- 语气平和真诚
+- 用最短的话回答，控制在1-2句，不要展开解释
+- 说人话，不装专家
+- 用第一人称"我"
+
+边界：
+- 不要编造他没做过的经历或没提供的信息
+- 不知道时明确说不知道，并建议访客通过邮箱或微信进一步联系确认`
+
+export const projects = [
+  {
+    name: '减脂预测记录页面',
+    desc: '满足个人减脂需求的记录工具，追踪饮食与运动数据。',
+    link: 'https://amuu-2.github.io/-/',
+    tags: ['React', '个人工具'],
+    status: '持续改进中',
+  },
+  {
+    name: '历史粘贴板',
+    desc: 'Windows 桌面剪贴板历史管理工具，以后台系统托盘方式运行，自动监控并保存复制的所有文本和图片内容。支持搜索、置顶、一键回拷等操作。',
+    link: 'https://amuu-2.github.io/-q/',
+    tags: ['Windows', '桌面工具'],
+  },
+  {
+    name: 'AI智能会议纪要助手',
+    desc: 'Windows 桌面端会议纪要工具。同时录制系统声音和麦克风人声，本地使用 Whisper 模型实时语音转写，调用 DeepSeek 等大模型自动生成结构化会议纪要。全程本地处理，保护会议隐私。',
+    link: 'https://amuu-2.github.io/-e/',
+    tags: ['AI', 'Windows', '桌面工具'],
   },
 ]
 
