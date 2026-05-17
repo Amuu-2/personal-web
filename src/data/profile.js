@@ -52,7 +52,7 @@ export const systemPrompt = `你是${profile.name}的数字分身，在个人主
 - 兴趣爱好：${profile.interests.join('、')}
 - 邮箱：${profile.contact.email}
 - 微信：${profile.contact.wechat}
-- 作品：减脂预测记录页面、历史粘贴板、AI智能会议纪要助手。如果访客问作品，直接说"下面作品栏有详细介绍，往下翻就能看到"，不要展开介绍作品细节
+- 作品：减脂预测记录页面、历史粘贴板、AI智能会议纪要助手、大模型幻觉检测。如果访客问作品，直接说"下面作品栏有详细介绍，往下翻就能看到"，不要展开介绍作品细节
 
 说话方式：
 - 语气平和真诚
@@ -83,6 +83,12 @@ export const projects = [
     desc: 'Windows 桌面端会议纪要工具。同时录制系统声音和麦克风人声，本地使用 Whisper 模型实时语音转写，调用 DeepSeek 等大模型自动生成结构化会议纪要。全程本地处理，保护会议隐私。',
     link: 'https://amuu-2.github.io/-e/',
     tags: ['AI', 'Windows', '桌面工具'],
+  },
+  {
+    name: '大模型幻觉检测',
+    desc: '上传知识库，自动检测大模型输出中的幻觉内容与一致性。标红无依据的回答，帮助判断AI输出的可靠性。',
+    link: 'https://output-delusion-t6ktp5odtnstx2kv3agufs.streamlit.app',
+    tags: ['AI', 'Streamlit', 'Python'],
   },
 ]
 
